@@ -60,16 +60,20 @@ class UrbanRoutesPage:
         self.driver.find_element(By.XPATH,"//div[@class='modes-container']//div[@class='mode'][2]").click()
 
     def click_on_order_a_taxi(self):
-        WebDriverWait(self.driver,100).until(expected_conditions.element_to_be_clickable((By.XPATH,"//div[@class='results-text']//button[contains(text(), 'Pedir un taxi')]")))
+        # Temporizador corregido
+        WebDriverWait(self.driver,15).until(expected_conditions.element_to_be_clickable((By.XPATH,"//div[@class='results-text']//button[contains(text(), 'Pedir un taxi')]")))
         self.driver.find_element(By.CSS_SELECTOR,"button.button.round").click()
 
     def click_on_comfort_tariff(self):
-        WebDriverWait(self.driver,100).until(expected_conditions.element_to_be_clickable((By.XPATH,"//div[text()='Comfort']")))
+        # Temporizador corregido
+        WebDriverWait(self.driver,15).until(expected_conditions.element_to_be_clickable((By.XPATH,"//div[text()='Comfort']")))
         self.driver.find_element(By.XPATH,"//div[text()='Comfort']").click()
 
     def set_phone_number(self):
-        self.driver.find_element(By.XPATH,"//div[text()='Número de teléfono']").click()
-        WebDriverWait(self.driver, 10).until(expected_conditions.visibility_of_element_located((By.XPATH, "//div[@class='modal']//div[@class='section active']")))
+        # ¡Aquí está la correción del selector!!!!!!
+        self.driver.find_element(By.CLASS_NAME,"np-button").click()
+        # Temporizador corregido
+        WebDriverWait(self.driver, 15).until(expected_conditions.visibility_of_element_located((By.XPATH, "//div[@class='modal']//div[@class='section active']")))
 
         phone_field = self.driver.find_element(By.ID,"phone")
         phone_field.send_keys(data.phone_number)
@@ -114,7 +118,7 @@ class UrbanRoutesPage:
         self.driver.find_element(By.CSS_SELECTOR,"span.smart-button-main").click()
 
     def wait_for_taxi_driver_information(self):
-        WebDriverWait(self.driver, 100).until(expected_conditions.visibility_of_element_located((By.XPATH,"(//div[@class='order-btn-group'])[1]//div[2]")))
+        WebDriverWait(self.driver, 50).until(expected_conditions.visibility_of_element_located((By.XPATH,"(//div[@class='order-btn-group'])[1]//div[2]")))
 
 class TestUrbanRoutes:
 
