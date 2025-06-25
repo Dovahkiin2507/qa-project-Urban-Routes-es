@@ -1,6 +1,4 @@
-# Urban Routes - Pruebas Automatizadas
-
-# Urban Routes – Automatización de pruebas para solicitud de taxi (Sprint 8)
+# Urban Routes – Automatización de pruebas para solicitud de taxi
 
 Este proyecto automatiza el flujo de pedido de taxi en la versión web de Urban Routes. Se desarrolla como parte de un ejercicio práctico de QA para verificar que todo el proceso de reserva de un viaje funcione correctamente desde el punto de vista del usuario.
 
@@ -47,7 +45,7 @@ La automatización incluye una prueba end-to-end que simula el comportamiento de
    ```
 💡 Recomendación: usa un entorno virtual para mantener organizadas tus dependencias.
 
-##✅ Funcionalidades probadas
+## ✅ Funcionalidades probadas
 Configurar dirección de recogida.
 
 Seleccionar tarifa “Comfort”.
