@@ -62,5 +62,5 @@ Pedir 2 helados.
 
 Confirmar solicitud y esperar la asignación del conductor.
 
-##📌 Conclusión
+## 📌 Conclusión
 Este proyecto demuestra cómo automatizar un flujo complejo de interacción de usuario en una aplicación web. Las pruebas se ejecutan correctamente, simulando de forma realista el proceso de solicitud de un taxi. Se verificó el correcto funcionamiento de cada paso del proceso, así como las interacciones con formularios, modales y validaciones. Esta práctica refuerza habilidades fundamentales de automatización para entornos reales de trabajo en QA.
